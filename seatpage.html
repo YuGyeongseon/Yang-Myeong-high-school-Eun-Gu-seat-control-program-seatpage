@@ -1,0 +1,899 @@
+# Yang-Myeong-high-school-Eun-Gu-seat-control-program-seatpage
+<html>
+<meta charset ="UTF-8">
+<head>
+<title> 좌석페이지
+</title>
+
+<style>
+
+    body {
+
+        background: #A1D2CB;
+
+      }
+
+      
+
+      * {
+
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+
+        font-weight: bold;
+
+      }
+
+      .container {
+
+        
+
+        position: absolute;
+        
+        top: 68px;
+        left: 210px;
+
+        
+
+        
+
+      }
+      .container1{
+
+        
+
+        position: absolute;
+        
+        top: 100px;
+        left: 210px;
+
+        
+
+        
+
+      }
+      .container2{
+
+        
+
+        position: absolute;
+        
+        top: 132px;
+        left: 210px;
+
+        
+
+        
+
+      }
+      .container3{
+
+        
+
+        position: absolute;
+        
+        top: 164px;
+        left: 210px;
+
+        
+
+        
+
+      }
+      .container4 {
+
+        
+
+        position: absolute;
+        
+        top: 196px;
+        left: 210px;
+
+        
+
+        
+
+      }
+      .container5 {
+
+        
+
+        position: absolute;
+        
+        top: 228px;
+        left: 210px;
+
+        
+
+        
+
+      }
+      .container6 {
+
+        
+
+        position: absolute;
+        
+        top: 260px;
+        left: 210px;
+
+        
+
+        
+
+      }
+      .container7 {
+
+        
+
+        position: absolute;
+        
+        top: 292px;
+        left: 210px;
+
+        
+
+        
+
+      }
+      .container8 {
+
+        
+
+        position: absolute;
+        
+        top: 324px;
+        left: 210px;
+
+        
+
+        
+
+      }
+      .container9 {
+
+        
+
+        position: absolute;
+        
+        top: 356px;
+        left: 210px;
+
+        
+
+        
+
+      }
+
+      .container0 {
+          
+          position: absolute;
+          top:68px;
+          right:210px;
+
+        
+      }
+      .container01 {
+          
+          position: absolute;
+          top:100px;
+          right:210px;
+
+        
+      }
+      .container02 {
+          
+          position: absolute;
+          top:132px;
+          right:210px;
+
+        
+      }
+      .container03 {
+          
+          position: absolute;
+          top:164px;
+          right:210px;
+
+        
+      }
+      .container04 {
+          
+          position: absolute;
+          top:196px;
+          right:210px;
+
+        
+      }
+      .container05 {
+          
+          position: absolute;
+          top:228px;
+          right:210px;
+
+        
+      }
+      .container06 {
+          
+          position: absolute;
+          top:260px;
+          right:210px;
+
+        
+      }
+      .container07 {
+          
+          position: absolute;
+          top:292px;
+          right:210px;
+
+        
+      }
+      .container08 {
+          
+          position: absolute;
+          top:324px;
+          right:210px;
+
+        
+      }
+      .container09 {
+          
+          position: absolute;
+          top:356px;
+          right:210px;
+
+        
+      }
+      
+      
+
+      .titlestyle {
+         
+         width:100%;
+         height:50px;
+         background:#20a7f7;
+    
+         text-align:center;
+         line-height:50px;
+         font-size:35px;
+      }
+
+      /*Switch*/
+
+      
+
+      .switch {
+
+        position: relative;
+
+        width: 150px;
+
+        height: 20px;
+
+        display: block;
+
+        margin: auto;
+
+        margin-bottom: auto;
+
+      }
+
+      
+
+      .switch input {
+
+        display: none;
+
+      }
+
+      
+
+      
+
+      
+
+      .slider.round {
+
+        border-radius: 3px;
+
+      }
+
+      
+
+      .slider {
+
+        position: absolute;
+
+        cursor: pointer;
+
+        top: 0;
+
+        left: 0;
+
+        right: 0;
+
+        bottom: 0;
+
+        background-color: rgb(246, 246, 246);
+
+        -webkit-transition: .4s;
+
+        transition: .4s;
+
+        border: 2px solid #072816;
+
+      }
+
+      /*Moving SLider Section*/
+
+      
+
+      .slider::before {
+
+        position: absolute;
+
+        content: "";
+
+        height: 100%;
+
+        width: 50%;
+
+        left: 0;
+
+        bottom: 0;
+
+        background-color: #20a7f7;
+
+        -webkit-transition: .40s;
+
+        transition: .4s;
+
+      }
+     
+      
+
+      /*Slider Text*/
+
+      
+
+      .slider_text {
+
+        position: absolute;
+
+        transform: translate(-50%,-50%);
+
+        top: 50%;
+
+        left: 50%;
+
+        font-size: 10px;
+
+        width: 100%;
+
+        text-align: center;
+
+      }
+
+      
+
+      .slider_text > span {
+
+        color: #fff;
+
+        font-size: 10px;
+
+        width: 50%;
+
+        display: block;
+
+        float: left;
+
+        -webkit-transition: .4s;
+
+        transition: .4s;
+
+      }
+
+      
+
+      
+
+      /*Changes on Slide*/
+
+      
+
+      input:checked + .slider::before {
+
+        -webkit-transform: translateX(100px);
+
+        -ms-transform: translateX(100px);
+
+        transform: translateX(74px);
+
+      }
+
+      
+
+      input:checked + .slider::after {
+
+        color: #000000;
+
+      }
+
+      
+
+      input:checked + .slider .on {
+
+        color: #00ff26;
+
+      }
+
+      
+
+      .slider .slider_text .on {
+
+        color: #000000;
+
+      }
+     
+      .num {
+         
+          position :absolute;
+          left:180px;
+          top:65px;
+        
+          
+      }
+      .num1 {
+          position :absolute;
+          left:180px;
+          top:97px;
+        
+          
+      }
+      .num2 {
+          position :absolute;
+          left:180px;
+          top:129px;
+        
+          
+      }
+      .num3 {
+          position :absolute;
+          left:180px;
+          top:161px;
+        
+          
+      }.num4 {
+          position :absolute;
+          left:180px;
+          top:193px;
+        
+          
+      }
+      .num5 {
+          position :absolute;
+          left:172px;
+          top:225px;
+        
+          
+      }
+      .num6 {
+          position :absolute;
+          left:172px;
+          top:257px;
+        
+          
+      }
+      .num7 {
+          position :absolute;
+          left:172px;
+          top:289px;
+        
+          
+          
+      }
+      .num8 {
+          position :absolute;
+          left:172px;
+          top:321px;
+        
+          
+      }
+      .num9 {
+          position :absolute;
+          left:172px;
+          top:353px;
+        
+          
+      }
+      .num0 {
+          position: absolute;
+          right:365px;
+          top: 65px;
+      }
+       .num01 {
+          position :absolute;
+          right:365px;
+          top: 97px;
+      }
+       .num02 {
+          position: absolute;
+          right:365px;
+          top: 129px;
+      }
+       .num03 {
+          position: absolute;
+          right:365px;
+          top: 161px;
+      }
+       .num04 {
+          position: absolute;
+          right:365px;
+          top: 193px;
+      }
+       .num05 {
+          position: absolute;
+          right:365px;
+          top: 225px;
+      }
+       .num06 {
+          position: absolute;
+          right:365px;
+          top: 257px;
+      }
+       .num07 {
+          position :absolute;
+          right:365px;
+          top: 289px;
+      }
+       .num08 {
+          position :absolute;
+          right:365px;
+          top: 321px;
+      }
+       .num09 {
+          position :absolute;
+          right:365px;
+          top: 353px;
+      }
+      .goEndPageButton {
+          font-size:20px;padding:10px 5px;
+          background-color: #20a7f7;
+          border-radius:20%;
+          position :absolute;
+          right: 50px;
+          bottom: 30px;
+      }
+  
+
+        </style>
+ </head>
+ <body>
+ <div class ="titlestyle"> 좌석</div>
+  <div class="box1"></div>
+ <div class ="num">1번</div>
+ <div class="box1"></div>
+    <div class="container">
+
+        <label class="switch">
+
+            <input type="checkbox" id="toggle_vat" class="toggle_vat">
+
+            <div class="slider round">
+
+          <span class="slider_text"><span class="off">빈자리</span><span class="on">이용중</span></span> 
+            </div>  
+        </label>
+    </div>
+ <div class ="num0">2번</div>
+    <div class="container0">
+
+        <label class="switch">
+
+            <input type="checkbox" id="toggle_vat" class="toggle_vat">
+
+            <div class="slider round">
+
+           <span class="slider_text"><span class="off">빈자리</span>
+           <span class="on">이용중</span></span> 
+
+            </div>  
+
+        </label>
+
+    </div>
+ <div class ="num1">3번</div>
+    <div class="container1">
+
+        <label class="switch">
+
+            <input type="checkbox" id="toggle_vat" class="toggle_vat">
+
+            <div class="slider round">
+
+           <span class="slider_text"><span class="off">빈자리</span><span class="on">이용중</span></span> 
+
+            </div>  
+
+        </label>
+
+    </div>
+ <div class ="num01">4번</div>
+    <div class="container01">
+
+        <label class="switch">
+
+            <input type="checkbox" id="toggle_vat" class="toggle_vat">
+
+            <div class="slider round">
+
+           <span class="slider_text"><span class="off">빈자리</span><span class="on">이용중</span></span> 
+
+            </div>  
+
+        </label>
+
+    </div>
+ <div class ="num2">5번</div>
+    <div class="container2">
+
+        <label class="switch">
+
+            <input type="checkbox" id="toggle_vat" class="toggle_vat">
+
+            <div class="slider round">
+
+           <span class="slider_text"><span class="off">빈자리</span><span class="on">이용중</span></span> 
+
+            </div>  
+
+        </label> 
+    </div>
+ <div class ="num02">6번</div>
+    <div class="container02">
+
+        <label class="switch">
+
+            <input type="checkbox" id="toggle_vat" class="toggle_vat">
+
+            <div class="slider round">
+
+           <span class="slider_text"><span class="off">빈자리</span><span class="on">이용중</span></span> 
+
+            </div>  
+
+        </label>
+
+    </div>
+ <div class ="num3">7번</div>
+    <div class="container3">
+
+        <label class="switch">
+
+            <input type="checkbox" id="toggle_vat" class="toggle_vat">
+
+            <div class="slider round">
+
+           <span class="slider_text"><span class="off">빈자리</span><span class="on">이용중</span></span> 
+
+            </div>  
+
+        </label>
+
+    </div>
+ <div class ="num03">8번</div>
+    <div class="container03">
+
+        <label class="switch">
+
+            <input type="checkbox" id="toggle_vat" class="toggle_vat">
+
+            <div class="slider round">
+
+           <span class="slider_text"><span class="off">빈자리</span><span class="on">이용중</span></span> 
+
+            </div>  
+
+        </label>
+
+    </div>
+ <div class ="num4">9번</div>
+    <div class="container4">
+
+        <label class="switch">
+
+            <input type="checkbox" id="toggle_vat" class="toggle_vat">
+
+            <div class="slider round">
+
+           <span class="slider_text"><span class="off">빈자리</span><span class="on">이용중</span></span> 
+
+            </div>  
+
+        </label>
+
+    </div>
+ <div class ="num04">10번</div>
+    <div class="container04">
+
+        <label class="switch">
+
+            <input type="checkbox" id="toggle_vat" class="toggle_vat">
+
+            <div class="slider round">
+
+           <span class="slider_text"><span class="off">빈자리</span><span class="on">이용중</span></span> 
+
+            </div>  
+
+        </label>
+
+    </div>
+ <div class ="num5">11번</div>
+    <div class="container5">
+
+        <label class="switch">
+
+            <input type="checkbox" id="toggle_vat" class="toggle_vat">
+
+            <div class="slider round">
+
+           <span class="slider_text"><span class="off">빈자리</span><span class="on">이용중</span></span> 
+
+            </div>  
+
+        </label>
+
+    </div>
+ <div class ="num05">12번</div>
+    <div class="container05">
+
+        <label class="switch">
+
+            <input type="checkbox" id="toggle_vat" class="toggle_vat">
+
+            <div class="slider round">
+
+           <span class="slider_text"><span class="off">빈자리</span><span class="on">이용중</span></span> 
+
+            </div>  
+
+        </label>
+
+    </div>
+    <div class ="num6">13번</div>
+    <div class="container6">
+
+        <label class="switch">
+
+            <input type="checkbox" id="toggle_vat" class="toggle_vat">
+
+            <div class="slider round">
+
+           <span class="slider_text"><span class="off">빈자리</span><span class="on">이용중</span></span> 
+
+            </div>  
+
+        </label>
+
+    </div>
+ <div class ="num06">14번</div>
+    <div class="container06">
+
+        <label class="switch">
+
+            <input type="checkbox" id="toggle_vat" class="toggle_vat">
+
+            <div class="slider round">
+
+           <span class="slider_text"><span class="off">빈자리</span><span class="on">이용중</span></span> 
+
+            </div>  
+
+        </label>
+
+    </div>
+ <div class ="num7">15번</div>
+    <div class="container7">
+
+        <label class="switch">
+
+            <input type="checkbox" id="toggle_vat" class="toggle_vat">
+
+            <div class="slider round">
+
+           <span class="slider_text"><span class="off">빈자리</span><span class="on">이용중</span></span> 
+
+            </div>  
+
+        </label>
+
+    </div>
+ <div class ="num07">16번</div>
+    <div class="container07">
+
+        <label class="switch">
+
+            <input type="checkbox" id="toggle_vat" class="toggle_vat">
+
+            <div class="slider round">
+
+           <span class="slider_text"><span class="off">빈자리</span><span class="on">이용중</span></span> 
+
+            </div>  
+
+        </label>
+
+    </div>
+ <div class ="num8">17번</div>
+    <div class="container8">
+
+        <label class="switch">
+
+            <input type="checkbox" id="toggle_vat" class="toggle_vat">
+
+            <div class="slider round">
+
+           <span class="slider_text"><span class="off">빈자리</span><span class="on">이용중</span></span> 
+
+            </div>  
+
+        </label>
+
+    </div>
+ <div class ="num08">18번</div>
+    <div class="container08">
+
+        <label class="switch">
+
+            <input type="checkbox" id="toggle_vat" class="toggle_vat">
+
+            <div class="slider round">
+
+           <span class="slider_text"><span class="off">빈자리</span><span class="on">이용중</span></span> 
+
+            </div>  
+
+        </label>
+
+    </div>
+ <div class ="num9">19번</div>
+    <div class="container9">
+
+        <label class="switch">
+
+            <input type="checkbox" id="toggle_vat" class="toggle_vat">
+
+            <div class="slider round">
+
+           <span class="slider_text"><span class="off">빈자리</span><span class="on">이용중</span></span> 
+
+            </div>  
+
+        </label>
+
+    </div>
+ <div class ="num09">20번</div>
+    <div class="container09">
+
+        <label class="switch">
+
+            <input type="checkbox" id="toggle_vat" class="toggle_vat">
+
+            <div class="slider round">
+
+           <span class="slider_text"><span class="off">빈자리</span><span class="on">이용중</span></span> 
+
+            </div>  
+
+        </label>
+
+    </div>
+     <a href ="엔드페이지 서버주소">
+ <button class="goEndPageButton">돌아가기</button>
+ </a>
+
+</body>
+
+</html>

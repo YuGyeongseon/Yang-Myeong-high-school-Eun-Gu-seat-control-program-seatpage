@@ -1,1 +1,0 @@
-# Yang-Myeong-high-school-Eun-Gu-seat-control-program-seatpage
